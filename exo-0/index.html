@@ -7,22 +7,25 @@
 
         <h1>Exercice 0</h1>
 
-        <script type="text/javascript">
+        <script type="text/javascript"> // Ouverture de la balise <script> qui va nous permettre d'écrire du JS à l'intérieur
 
         /* Section 1 */   
 
-        var name = "Joe";
-        var city = 'London';
-        var age = 32;
-        var isRed = true;
-        var isOld = age > 80;
+        var name = "Joe"; // déclaration d'une variable nommée "name" qui prend pour valeur la chaine de caractères(String) "Joe"
+        var city = 'London'; // déclaration d'une variable nommée "city" qui prend pour valeur la chaine de caractères "London" 
+        var age = 32; // déclaration d'une variable nommée "age" qui prend pour valeur l'entier "32"
+        var isRed = true; // déclaration d'une variable nommée "isRed" qui prend pour type de valeur un booléen qui a pour valeur "true"
+        var isOld = age > 80; // déclaration d'une variable nommée "isOld" qui prend pour valeur la variable "age" supérieure à 80. La variable "age" prend pour valeur l'entier 32 
 
-        var previousJobs = ['lawyer', 'developper', 'Professionnal climber'];
+        var previousJobs = ['lawyer', 'developper', 'Professionnal climber']; // déclaration d'un tableau(array) à une dimension nommée "previousJob" qui contient dans ses index des valeurs de type STRINGS. ex: La valeur à l'index 0 de ce tableau est la strings "lawyer" etc.
 
+        // déclaration d'une fonction nommée "info" qui prend en paramètres les variables "height" et "weight". Cette fonction comprend des blocs de codes qui s'exécuteront si les conditions liées sont remplies
         function info(height, weight) {
+            // condition 1 : SI la variable "height" est strictement supérieure à 180 alors renvoie moi dans la console "Vous êtes grand"
             if (height > 180) {
                 console.log('Vous êtes grand');
             }
+            // condition 2 : SI la variable "weight" est strictement inférieure à 0 alors renvoie moi dans la console "..." SINON SI "weight" est strictement inférieure à 15 renvoie moi dans la console "..." SINON renvoie moi dans la console "..."
             if (weight < 0) {
                 console.log('oups, there is a problem');
             } else if ( weight < 15) {
@@ -32,35 +35,41 @@
             }
         }
 
+        //on appelle la fonction "info" et on lui applique les paramètres : ici 165 va correspondre à height et 45 à weight
         info(165, 45);
 
-        var myHeight = 175;
-        var myWeight = 86;
+        var myHeight = 175; // déclaration d'une variable nommée "myHeight" qui prend pour valeur l'entier 175
+        var myWeight = 86; // déclaration d'une variable nommée "myWeight" qui prend pour valeur l'entier 86
 
+        // on appelle la fonction "info" et on lui passe en paramètres les variables "myHeight" et "myWeight" déclarées plus tôt
         info(myHeight, myWeight);
 
+        // on appelle la fonction "info" et on lui passe en paramètres les variables "myHeight" + 15 et "myWeight" - 100
         info(myHeight + 15, myWeight - 100);
 
+        // on déclare une fonction nommée toUpper qui prend pour seul paramètre "variable"
         function toUpper(variable) {
-            return variable.toUpperCase();
+            return variable.toUpperCase(); // cette fonction "toUpper" retourne le paramètre saisi en UpperCase(Majuscule)
         }
 
-        var upperName = toUpper(name);
+        var upperName = toUpper(name); // on déclare une variable nommée "upperName" qui prend comme valeur la fonction "toUpper" à laquelle on passe en paramètre la variable "name"
 
+        // Boucle FOR : Pour i = 0 (départ); i < 3 (condition de boucle); i = i + 1 (incrémentation à chaque tour de boucle)
         for (i = 0; i < 3; i = i + 1) {
-            console.log(previousJobs[i]);
+            console.log(previousJobs[i]); // affiche moi dans la console la valeur à l'index i du tableau nommée "previousJob"
         }
 
         /* Section 2: */
 
         // afficher la ville dans laquele Joe vit.     
-
+            console.log("Joe vie à", city)
         // afficher si Joe est roux ou pas.
+            console.log("Joe est-il roux ?", isRed)
 
         /* Section 3 */
 
-        // console.log(myVariable);
-
+            console.log(myVariable);
+        // lorsque l'on décommente la ligne ci-dessus, la console nous renvoie une ERREUR et l'endroit ou elle est située : "index.html:71 Uncaught ReferenceError: myVariable is not defined at index.html:71:25" 
         </script>
 
     </body>
