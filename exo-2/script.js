@@ -1,7 +1,7 @@
 // you can write js here
 console.log('exo-2');
 
-const myDate = new Date('May 26, 2023 18:00:00'); // new Date('May 26, 2023 18:00:00') ou new Date('May 29, 2023 08:00:00')
+const myDate = new Date('May 29, 2023 08:00:00'); // new Date('May 26, 2023 18:00:00') ou new Date('May 29, 2023 08:00:00')
 console.log(myDate);
 
 const isNotWeekEnd = "C'est pas encore le week-end bogoss";
@@ -15,8 +15,8 @@ console.log(today)
 let hours = myDate.getHours();
 console.log(hours);
 
-if (today == 5 && hours > 17) {
-    console.log("On est", new Intl.DateTimeFormat('fr-FR', options).format(myDate), ".", "Il est", hours, ".", "On peut dire que", isWeekEnd, "!!!" )
+if (today == 5 && hours > 17 || today== 1 && hours < 9) {
+    console.log("On est", new Intl.DateTimeFormat('fr-FR', options).format(myDate), ".", "Il est", hours, "h.", "On peut dire que", isWeekEnd, "!!!" )
 } else if (today > 0 && today < 6 ) {
     console.log("On est que", new Intl.DateTimeFormat('fr-FR', options).format(myDate), ":(", isNotWeekEnd);
 } 
