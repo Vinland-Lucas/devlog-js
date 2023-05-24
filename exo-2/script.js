@@ -19,8 +19,8 @@ if (isTesting == false) {
     today = myDate.getDay();
     hours = myDate.getHours();  
 } else {
-    today = prompt("On est quel jour ?");
-    hours = prompt("Quelle heure est-il ?");
+    today = prompt("On est quel jour ? Choisir un nombre de 0 à 6");
+    hours = prompt("Quelle heure est-il ? Choisir un nombre de 0 à 23");
 }
 
 if (today == 5 && hours > 17 || today== 1 && hours < 9) {
