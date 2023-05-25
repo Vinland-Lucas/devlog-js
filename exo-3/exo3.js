@@ -89,3 +89,12 @@ function findWinner(playerChoice, computerChoice) {
 }
 
 findWinner(getPlayerChoice(playerInput), getComputerChoice());
+
+function playGame() {
+    let uChoice = getPlayerChoice(playerInput);
+    let computerChoice = getComputerChoice();
+    console.log(uChoice);
+    console.log(computerChoice);
+}
+
+playGame();
