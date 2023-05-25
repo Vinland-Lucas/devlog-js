@@ -6,5 +6,12 @@ playerInput = playerInput.toLowerCase();
 console.log(playerInput)
 
 function getPlayerChoice(playerInput) {
-    return playerInput
+    if (playerInput === "rock" || playerInput === "paper" || playerInput === "scissors") {
+        console.log(playerInput);
+        return playerInput;
+     } else {
+        console.log("Erreur de saisie bg !")
+     }
 }
+
+getPlayerChoice(playerInput);
