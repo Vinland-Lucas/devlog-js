@@ -44,3 +44,7 @@ function getComputerChoice() {
 }
 
 getComputerChoice();
+
+function findWinner(playerChoice, computerChoice) {
+    
+}
