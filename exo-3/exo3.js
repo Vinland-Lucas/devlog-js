@@ -1,11 +1,12 @@
 // you can write js here
 console.log('exo-3');
 
-var playerInput = prompt("Your choice ( rock, paper, scissors) ?");
-playerInput = playerInput.toLowerCase();
+var playerInput = prompt("Your choice ( rock, paper, scissors, bomb (eheh)) ?");
+
 
 function getPlayerChoice(playerInput) {
-    if (playerInput === "rock" || playerInput === "paper" || playerInput === "scissors") {
+    playerInput = playerInput.toLowerCase();
+    if (playerInput === "rock" || playerInput === "paper" || playerInput === "scissors" || playerInput === "bomb") {
         console.log("choix du joueur :", playerInput);
         return playerInput;
      } else {
@@ -13,7 +14,7 @@ function getPlayerChoice(playerInput) {
      }
 }
 
-getPlayerChoice(playerInput);
+// getPlayerChoice(playerInput);
 
 function getComputerChoice() {
     let randomNumber = Math.floor(Math.random() * (3 - 0) + 0 );
@@ -44,7 +45,7 @@ function getComputerChoice() {
     return choice;
 }
 
-getComputerChoice();
+// getComputerChoice();
 
 function findWinner(playerChoice, computerChoice) {
     let result;
@@ -86,15 +87,23 @@ function findWinner(playerChoice, computerChoice) {
         console.log("résultat du match :", result);
         return result;
     }
+
+    if (playerChoice == "bomb") {
+        result = "Won";
+        console.log("résultat du match :", result);
+        return result;
+    }
 }
 
-findWinner(getPlayerChoice(playerInput), getComputerChoice());
+// findWinner(getPlayerChoice(playerInput), getComputerChoice());
 
 function playGame() {
     let uChoice = getPlayerChoice(playerInput);
     let computerChoice = getComputerChoice();
     console.log(uChoice);
     console.log(computerChoice);
+
+    console.log("Game Result :", findWinner(uChoice, computerChoice));
 }
 
 playGame();
